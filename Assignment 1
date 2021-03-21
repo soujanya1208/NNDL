@@ -1,0 +1,139 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "Welcome To Colaboratory",
+      "provenance": [],
+      "collapsed_sections": [],
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "display_name": "Python 3",
+      "name": "python3"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/soujanya1208/NNDL/blob/main/Assignment%201\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "7aS41Lb1EzDs",
+        "outputId": "a7cbd81a-0aa1-4e64-c929-4825dd477561",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "source": [
+        " \n",
+        "import random\n",
+        "x_i = random.random()\n",
+        "print(x_i)\n",
+        "n = 0.1\n",
+        "eps = 0.0000000000001\n",
+        "del_x = 1\n",
+        "epochs = 1000\n",
+        "iters = 0\n",
+        "def f(x) :\n",
+        "    f_x = x**4 +3*x**2 +10\n",
+        "    return f_x\n",
+        "def deriv(x) :\n",
+        "    x_deriv = 4*(x**3)+6*x\n",
+        "    return x_deriv\n",
+        "while abs(del_x) > eps and iters < epochs :\n",
+        "    del_x = -n * deriv(x_i)\n",
+        "    x_i = x_i + del_x\n",
+        "    iters = iters + 1\n",
+        "    print(\"iterations\",iters,\"\\n X value is \",x_i)\n",
+        "    \n",
+        "print(\"the  minimum point occurs at \",x_i)\n",
+        "print(\"the value of f(x)\",f(x_i))"
+      ],
+      "execution_count": 1,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "0.8345899088247238\n",
+            "iterations 1 \n",
+            " X value is  0.10130575602997294\n",
+            "iterations 2 \n",
+            " X value is  0.040106427849247325\n",
+            "iterations 3 \n",
+            " X value is  0.016016766254055594\n",
+            "iterations 4 \n",
+            " X value is  0.0064050629456298466\n",
+            "iterations 5 \n",
+            " X value is  0.0025619200716011183\n",
+            "iterations 6 \n",
+            " X value is  0.0010247613026426613\n",
+            "iterations 7 \n",
+            " X value is  0.0004099040906016821\n",
+            "iterations 8 \n",
+            " X value is  0.00016396160869161508\n",
+            "iterations 9 \n",
+            " X value is  6.558464171350723e-05\n",
+            "iterations 10 \n",
+            " X value is  2.6233856572562017e-05\n",
+            "iterations 11 \n",
+            " X value is  1.0493542621802989e-05\n",
+            "iterations 12 \n",
+            " X value is  4.197417048258999e-06\n",
+            "iterations 13 \n",
+            " X value is  1.678966819274019e-06\n",
+            "iterations 14 \n",
+            " X value is  6.715867277077143e-07\n",
+            "iterations 15 \n",
+            " X value is  2.6863469108296456e-07\n",
+            "iterations 16 \n",
+            " X value is  1.0745387643317805e-07\n",
+            "iterations 17 \n",
+            " X value is  4.2981550573270724e-08\n",
+            "iterations 18 \n",
+            " X value is  1.7192620229308255e-08\n",
+            "iterations 19 \n",
+            " X value is  6.877048091723298e-09\n",
+            "iterations 20 \n",
+            " X value is  2.7508192366893185e-09\n",
+            "iterations 21 \n",
+            " X value is  1.1003276946757275e-09\n",
+            "iterations 22 \n",
+            " X value is  4.401310778702909e-10\n",
+            "iterations 23 \n",
+            " X value is  1.7605243114811635e-10\n",
+            "iterations 24 \n",
+            " X value is  7.042097245924653e-11\n",
+            "iterations 25 \n",
+            " X value is  2.8168388983698608e-11\n",
+            "iterations 26 \n",
+            " X value is  1.1267355593479444e-11\n",
+            "iterations 27 \n",
+            " X value is  4.506942237391777e-12\n",
+            "iterations 28 \n",
+            " X value is  1.8027768949567104e-12\n",
+            "iterations 29 \n",
+            " X value is  7.211107579826841e-13\n",
+            "iterations 30 \n",
+            " X value is  2.8844430319307356e-13\n",
+            "iterations 31 \n",
+            " X value is  1.153777212772294e-13\n",
+            "iterations 32 \n",
+            " X value is  4.615108851089176e-14\n",
+            "the  minimum point occurs at  4.615108851089176e-14\n",
+            "the value of f(x) 10.0\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    }
+  ]
+}
