@@ -1,4 +1,21 @@
 {
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "Untitled0.ipynb",
+      "provenance": [],
+      "authorship_tag": "ABX9TyNfGTYkZf8PgOBpMuxNuWee",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
   "cells": [
     {
       "cell_type": "markdown",
@@ -12,6 +29,11 @@
     },
     {
       "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "vAPZz8sIvcXo"
+      },
+      "outputs": [],
       "source": [
         "#1. Split the above paragraph into sentences\n",
         "from nltk.tokenize import sent_tokenize\n",
@@ -20,12 +42,7 @@
         "Machines, after all, recognize numbers, not the letters of our language. And that can \n",
         "be a tricky landscape to navigate in machine learning.'''\n",
         "print(sent_tokenize(text))"
-      ],
-      "metadata": {
-        "id": "aGaXTBthrT00"
-      },
-      "execution_count": null,
-      "outputs": []
+      ]
     },
     {
       "cell_type": "code",
@@ -40,7 +57,7 @@
         "print('\\n-----\\n'.join(tokenizer.tokenize(data)))"
       ],
       "metadata": {
-        "id": "CZ3IOFVSrYpZ"
+        "id": "-TnOaWp0vgAt"
       },
       "execution_count": null,
       "outputs": []
@@ -57,7 +74,7 @@
         "print(word_tokenize(text))"
       ],
       "metadata": {
-        "id": "ZY5f5N5-reKz"
+        "id": "1YF029aTvlwD"
       },
       "execution_count": null,
       "outputs": []
@@ -75,7 +92,7 @@
         "    print(\"   {} is {}\".format(w,porter_stemmer.stem(w)))  "
       ],
       "metadata": {
-        "id": "EG_ZPaHWrjuC"
+        "id": "eGZ0ymHNvnBO"
       },
       "execution_count": null,
       "outputs": []
@@ -90,10 +107,10 @@
         "words = ['cats','trouble','troubling','troubled','having','Corriendo','at','was']\n",
         "print(\"lemma for :\")\n",
         "for w in words:\n",
-        "    print(\"   {} is {}\".format(w,w, wordnet_lemmatizer.lemmatize(w))) "
+        "    print(\"   {} is {}\".format(w,w, wordnet_lemmatizer.lemmatize(w)))  "
       ],
       "metadata": {
-        "id": "oO4TgNbUrqHj"
+        "id": "XQStUXcdvq2p"
       },
       "execution_count": null,
       "outputs": []
@@ -127,7 +144,7 @@
         "print(res)"
       ],
       "metadata": {
-        "id": "F4Sz4C3urv3F"
+        "id": "O5tqAcG-vvMQ"
       },
       "execution_count": null,
       "outputs": []
@@ -160,25 +177,10 @@
         "data_analysis.plot(25, cumulative=False)"
       ],
       "metadata": {
-        "id": "_RKyTiEPr-v1"
+        "id": "jAkgzRyfvzos"
       },
       "execution_count": null,
       "outputs": []
     }
-  ],
-  "metadata": {
-    "colab": {
-      "collapsed_sections": [],
-      "name": "Copy of Welcome To Colaboratory",
-      "toc_visible": true,
-      "provenance": [],
-      "include_colab_link": true
-    },
-    "kernelspec": {
-      "display_name": "Python 3",
-      "name": "python3"
-    }
-  },
-  "nbformat": 4,
-  "nbformat_minor": 0
+  ]
 }
